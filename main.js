@@ -52,7 +52,7 @@ function splitBill(tip) {
 // Event listener for the custom tip input
 customInput.addEventListener("input", (e) => {
   const inputValue = Number(e.target.value);
-  s;
+  
   if (inputValue > 100) {
     return;
   }
