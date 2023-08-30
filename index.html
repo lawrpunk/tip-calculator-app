@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="images/logo.svg" alt="logo" />
+      </header>
+      <section>
+        <div class="calculator-container">
+          <div class="calculator-item">
+            <div>
+              <label for="bill">Bill</label>
+              <h4 class="error-text error-bill"></h4>
+            </div>
+            <div class="input-wrapper">
+              <img
+                src="images/icon-dollar.svg"
+                alt="Dollar Icon"
+                class="input-icon"
+              />
+              <input
+                type="number"
+                id="bill"
+                name="bill"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+          <div class="calculator-item">
+            <h4>Select Tip %</h4>
+            <div class="tip-buttons">
+              <button class="tip-button" onclick="splitBill(5)">5%</button>
+              <button class="tip-button" onclick="splitBill(10)">10%</button>
+              <button class="tip-button" onclick="splitBill(15)">15%</button>
+              <button class="tip-button" onclick="splitBill(25)">25%</button>
+              <button class="tip-button" onclick="splitBill(50)">50%</button>
+              <input
+                type="number"
+                id="custom"
+                name="custom"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="calculator-item">
+            <div>
+              <label for="person">Number of People</label>
+              <h4 class="error-text error-person"></h4>
+            </div>
+            <div class="input-wrapper">
+              <img
+                src="images/icon-person.svg"
+                alt="Person Icon"
+                class="input-icon"
+              />
+              <input
+                type="number"
+                id="person"
+                name="person"
+                placeholder="0"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="result-container">
+          <div class="result-container-items">
+            <div class="result-item">
+              <div class="result-item-description">
+                <h4>Tip Amount</h4>
+                <h5>/ person</h5>
+              </div>
+              <div class="result-item-price">
+                <h1 id="tip-amount">$0.00</h1>
+              </div>
+            </div>
+            <div class="result-item">
+              <div class="result-item-description">
+                <h4>Total</h4>
+                <h5>/ person</h5>
+              </div>
+              <div class="result-item-price">
+                <h1 id="person-amount">$0.00</h1>
+              </div>
+            </div>
+          </div>
+          <div class="result-container-button">
+            <button onclick="reset()">RESET</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
